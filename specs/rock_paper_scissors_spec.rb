@@ -5,17 +5,17 @@ require_relative('../models/rock_paper_scissors.rb')
 class RockPaperScissorsTest < MiniTest::Test
 
   def test_play_rock_paper()
-    assert_equal("Paper Wins!",RockPaperScissors.play('rock', 'paper'))
-    assert_equal("Paper Wins!",RockPaperScissors.play('paper', 'rock'))
+    assert_equal("Paper",RockPaperScissors.play('rock', 'paper'))
+    assert_equal("Paper",RockPaperScissors.play('paper', 'rock'))
   end
 
   def test_play_rock_scissors()
-    assert_equal("Rock Wins!",RockPaperScissors.play('rock', 'scissors'))
-    assert_equal("Rock Wins!",RockPaperScissors.play('scissors', 'rock'))
+    assert_equal("Rock",RockPaperScissors.play('rock', 'scissors'))
+    assert_equal("Rock",RockPaperScissors.play('scissors', 'rock'))
   end
 
   def test_play_paper_scissors()
-    assert_equal("Scissors Wins!",RockPaperScissors.play('scissors', 'paper'))
-    assert_equal("Scissors Wins!",RockPaperScissors.play('paper', 'scissors'))
+    assert_equal("Scissors",RockPaperScissors.play('scissors', 'paper'))
+    assert_equal("Scissors",RockPaperScissors.play('paper', 'scissors'))
   end
 end
