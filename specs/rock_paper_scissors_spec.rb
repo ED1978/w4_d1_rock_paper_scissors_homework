@@ -36,4 +36,13 @@ class RockPaperScissorsTest < MiniTest::Test
   def test_paper_scissors_player_2()
     assert_equal(true, RockPaperScissors.paper_scissors_player_2('paper', 'scissors'))
   end
+
+  def test_valid_input()
+    assert_equal(nil, RockPaperScissors.valid_input('shoe', 'scissors'))
+    assert_equal(true, RockPaperScissors.valid_input('paper', 'scissors'))
+  end
+
+  def test_play_invalid_input()
+    assert_equal("Invalid input, please try again", RockPaperScissors.play("ball", "scissors"))
+  end
 end
